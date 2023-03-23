@@ -47,12 +47,12 @@ body{
 
 
 .PortI{
-    margin: 20%;
+    width: 20%;
     height: auto;
 }
 @media only screen and (max-width: 600px) {
     .PortI {
-        margin: 30%;
+        width: 30%;
     }
     
     .logo{
