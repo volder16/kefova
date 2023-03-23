@@ -6,6 +6,7 @@
 }
 
 .logo{
+    margin-top: 1%;
     width: 20%;
     display: block;
   margin-left: auto;
@@ -58,6 +59,7 @@ body{
     }
     
     .logo{
+        
         width: 50%;
     }
     
