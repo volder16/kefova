@@ -1,8 +1,24 @@
 /*index.html*/
+/*
 .header{
     display: block;
     width: 100% auto;
 
+}
+*/
+.header {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #f8f8f8;
+  transition: all 0.5s ease;
+}
+
+
+.header.show {
+  left: 0;
 }
 
 .logo{
@@ -18,25 +34,25 @@
 display: flex;
   justify-content: center;
     margin: 0;
-    margin-top: 1%;
+    margin-top: 0.3%;
     padding: 0;
 }
 .buttonMeny{
-  background-color: #ffffff;
+  background-color: #f8f8f8;
   color: #fff;
   font-weight: bold;
   border: none;
   padding: 0.3% 1%;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
     margin: 1%;
 
 }
 a{
     font-size: 90%;
     text-decoration: none;
-  color: #a3a3a3;
+  color: #5c5c5c;
 }
 
 body{
@@ -103,11 +119,13 @@ body{
 
 /* відображення на телефоні */
 @media only screen and (max-width: 600px) {
+    
     .portfolio {
       display: flex;
       align-items:center;
       margin: 10px 0;
     }
+    
     .portfolio img {
         margin-top: 1%;
         max-width: 60%;
@@ -127,20 +145,36 @@ body{
       margin-bottom: 5px;
         margin-top: 5px;
     }
+    
     .portfolio p {
   font-size: 10px;
   margin-bottom: 10px;
 }
+    
 .portfolio li {
   font-size: 10px;
   margin-bottom: 5px;
 }
+    
     .portfolio .info {
   flex-grow: 1;
   padding: 10px;
   background-color: #f9f9f9;
 }
-
+    
+    .portfolio .location {
+  font-size: 10px;
+  margin-top: 10px;
+}
+    
+.meny{
+display: flex;
+  justify-content: center;
+    margin: 0;
+    margin-top: 1%;
+    padding: 0;
+}
+    
 }
 
 
