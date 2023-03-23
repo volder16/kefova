@@ -1,23 +1,17 @@
 /*index.html*/
-/*
 .header{
     display: block;
     width: 100% auto;
 
 }
-*/
 .header {
-  position: fixed;
-  top: 0;
-  left: -2000px;
-  width: 100%;
-  background-color: #f8f8f8;
-  transition: all 0.5s ease;
+  position: relative;
+  top: -200px;
+  transition: top 0.5s ease-in-out;
 }
 
-
-.header.show {
-  left: 0;
+.header.slide {
+  top: 0;
 }
 
 .logo{
