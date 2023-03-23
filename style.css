@@ -67,7 +67,7 @@ body{
 }
 
 .portfolio .info {
-  flex-grow: 1;
+  flex-grow: 2;
   padding: 20px;
   background-color: #f9f9f9;
 }
@@ -105,8 +105,18 @@ body{
 
 /* відображення на телефоні */
 @media only screen and (max-width: 600px) {
+    .portfolio {
+      display: flex;
+      align-items:center;
+      margin: 10px 0;
+    }
+    .portfolio img {
+        margin-top: 1%;
+        max-width: 60%;
+        
+    }
     .PortI {
-        width: 40%;
+        width: 30%;
     }
     
     .logo{
@@ -115,9 +125,13 @@ body{
     }
     
     .portfolio h2 {
-      font-size: 20px;
+      font-size: 16px;
       margin-bottom: 10px;
     }
+    .portfolio p {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
 
 }
 
