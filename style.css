@@ -49,8 +49,59 @@ body{
 
 .PortI{
     width: 30%;
-    
+    margin-left: 10px;
 }
+
+
+
+/* портфоліо */
+.portfolio {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.portfolio img {
+  max-width: 40%;
+  margin-right: 10px;
+}
+
+.portfolio .info {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.portfolio h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.portfolio p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.portfolio ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.portfolio .location {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.portfolio .location .icon {
+  margin-right: 5px;
+}
+
 
 /* відображення на телефоні */
 @media only screen and (max-width: 600px) {
@@ -63,58 +114,13 @@ body{
         width: 50%;
     }
     
-    h2{
-        font-size: 5;
+    .portfolio h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
     }
+
 }
 
-/* портфоліо */
-.portfolio {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.portfolio img {
-  max-width: 300px;
-  margin-right: 20px;
-}
-
-.portfolio .info {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-.portfolio h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.portfolio p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.portfolio ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.portfolio li {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.portfolio .location {
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.portfolio .location .icon {
-  margin-right: 5px;
-}
 
 /*galery.html*/
 .gallery::-webkit-scrollbar {
