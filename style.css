@@ -44,6 +44,11 @@ body{
     padding: 0px;
 }
 
+
+#PortI{
+    margin: 20%;
+    height: auto;
+}
 @media only screen and (max-width: 600px) {
     #PortI {
         margin: 30%;
