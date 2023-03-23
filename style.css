@@ -9,7 +9,7 @@
 .header {
   position: relative;
   top: -200px;
-  animation: slide-in 0.5s forwards;
+  animation: slide-in 1s forwards;
 }
 
 
@@ -31,14 +31,6 @@
   margin-right: auto;
     
 
-}
-
-@keyframes opasity{
-    from{
-        opacity: 0;
-    }to{
-        opacity: 100;
-    }
 }
 
 .meny{
@@ -76,7 +68,7 @@ body{
     opacity: 0;
     width: 30%;
     margin-left: 10px;
-    animation: opasity 1s forwards;
+    animation: opasity 1.5s forwards;
 }
 
 
@@ -94,9 +86,12 @@ body{
 }
 
 .portfolio .info {
+    position: relative;
   flex-grow: 1;
   padding: 20px;
   background-color: #f9f9f9;
+    left: 100%;
+    animation: slide_left 1s forwards;
 }
 
 .portfolio h2 {
@@ -165,7 +160,7 @@ body{
 }
     
 .portfolio li {
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
     
@@ -198,7 +193,13 @@ display: flex;
         opacity: 100;
     }
 }
-
+@keyframes slide_left{
+    from{
+        
+    }to{
+        left: 0;
+    }
+}
 /*galery.html*/
 .gallery::-webkit-scrollbar {
   height: 12px;
