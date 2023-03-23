@@ -1,26 +1,44 @@
 /*index.html*/
+/*
 .header{
     display: block;
     width: 100% auto;
 
 }
+*/
 .header {
   position: relative;
   top: -200px;
-  transition: top 0.5s ease-in-out;
+  animation: slide-in 0.5s forwards;
 }
 
-.header.slide {
-  top: 0;
+
+@keyframes slide-in {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
 }
 
 .logo{
+    
     margin-top: 1%;
     width: 20%;
     display: block;
   margin-left: auto;
   margin-right: auto;
+    
 
+}
+
+@keyframes opasity{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 100;
+    }
 }
 
 .meny{
@@ -55,8 +73,10 @@ body{
 
 
 .PortI{
+    opacity: 0;
     width: 30%;
     margin-left: 10px;
+    animation: opasity 1s forwards;
 }
 
 
@@ -170,6 +190,14 @@ display: flex;
     
 }
 
+
+@keyframes opasity{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 100;
+    }
+}
 
 /*galery.html*/
 .gallery::-webkit-scrollbar {
