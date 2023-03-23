@@ -6,6 +6,14 @@
 
 }
 */
+
+@font-face {
+  font-family: 'Catorze27';
+  src: url('/fonts/catorze27style1-semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header {
   position: relative;
   top: -200px;
@@ -100,6 +108,7 @@ body{
 }
 
 .portfolio p {
+    font-family: 'Catorze27', sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -126,6 +135,9 @@ body{
 
 /* інформація 2 */
 .infoFoto{
+      display: flex;
+  align-items: center;
+  margin: 10px 0;
     position: relative;
     flex-grow: 1;
     padding: 20px;
@@ -136,6 +148,18 @@ body{
 
 .infoFoto p{
     
+}
+.infoFoto .text{
+    
+}
+
+.infoFoto .Foto{
+    width: 40%;
+
+}
+
+.infoFoto .Foto .f1{
+    max-width: 150px;
 }
 
 
@@ -198,6 +222,11 @@ display: flex;
     margin: 0;
     margin-top: 1%;
     padding: 0;
+}
+    
+.infoFoto .Foto{
+    width: 0%;
+    opacity: 0;
 }
     
 }
