@@ -44,6 +44,12 @@ body{
     padding: 0px;
 }
 
+@media only screen and (max-width: 600px) {
+    #PortI {
+        margin: 30%;
+    }
+}
+
 /* портфоліо */
 .portfolio {
   display: flex;
