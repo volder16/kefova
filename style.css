@@ -6,10 +6,29 @@
 
 }
 */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+/*font-family: 'Ubuntu Condensed', sans-serif;*/
 
 @font-face {
   font-family: 'Catorze27';
-  src: url('/fonts/catorze27style1-semibold.ttf') format('truetype');
+  src: url('/fonts/PTSansNarrow-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Amatic';
+  src: url('/fonts/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fjalla';
+  src: url('/fonts/FjallaOne-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -103,12 +122,17 @@ body{
 }
 
 .portfolio h2 {
+    font-family: 'Staatliches', cursive;
+/*    font-family: 'Luckiest Guy', cursive;*/
+/*    font-family: 'Yanone Kaffeesatz', sans-serif;*/
+/*  font-family: 'PT Sans Narrow', sans-serif;*/
   font-size: 40px;
   margin-bottom: 10px;
 }
 
 .portfolio p {
-    font-family: 'Catorze27', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
+/*    font-family: 'Catorze27', cursive;*/
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -120,6 +144,7 @@ body{
 }
 
 .portfolio li {
+    font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 18px;
   margin-bottom: 5px;
 }
@@ -151,6 +176,11 @@ body{
 }
 .infoFoto .text{
     
+}
+
+.text p{
+    font-size: 18px;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .infoFoto .Foto{
@@ -192,42 +222,49 @@ body{
         margin-top: 5px;
     }
     
-.portfolio p {
-    font-size: 10px;
-    margin-bottom: 10px;
-}
-    
-.portfolio li {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-    
-.portfolio .info {
-    position: relative;
-    flex-grow: 1;
-    padding: 10px;
-    background-color: #f9f9f9;
-    left: 100%;
-    animation: slide_left 1s forwards;
-}
-    
+    .portfolio p {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .portfolio li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .portfolio .info {
+        position: relative;
+        flex-grow: 1;
+        padding: 10px;
+        background-color: #f9f9f9;
+        left: 100%;
+        animation: slide_left 1s forwards;
+    }
+
     .portfolio .location {
-  font-size: 10px;
-  margin-top: 10px;
-}
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .meny{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 1%;
+        padding: 0;
+    }
+
+    .infoFoto .Foto{
+        width: 0%;
+        opacity: 0;
+    }
+    .Foto img{
+        width: 0;
+    }
     
-.meny{
-display: flex;
-  justify-content: center;
-    margin: 0;
-    margin-top: 1%;
-    padding: 0;
-}
-    
-.infoFoto .Foto{
-    width: 0%;
-    opacity: 0;
-}
+    .text p{
+        font-size: 10px;
+    }
     
 }
 
