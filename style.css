@@ -1,4 +1,6 @@
 /*index.html*/
+
+
 /*
 .header{
     display: block;
@@ -6,92 +8,91 @@
 
 }
 */
+
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
 /*font-family: 'Ubuntu Condensed', sans-serif;*/
 
 @font-face {
-  font-family: 'Catorze27';
-  src: url('/fonts/PTSansNarrow-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Amatic';
-  src: url('/fonts/AmaticSC-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Catorze27';
+    src: url('/fonts/PTSansNarrow-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fjalla';
-  src: url('/fonts/FjallaOne-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Amatic';
+    src: url('/fonts/AmaticSC-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fjalla';
+    src: url('/fonts/FjallaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .header {
-  position: relative;
-  top: -200px;
-  animation: slide-in 1s forwards;
+    position: relative;
+    top: -200px;
+    animation: slide-in 1s forwards;
 }
-
 
 @keyframes slide-in {
-  from {
-    top: -200px;
-  }
-  to {
-    top: 0;
-  }
+    from {
+        top: -200px;
+    }
+    to {
+        top: 0;
+    }
 }
 
-.logo{
-    
+.logo {
     margin-top: 1%;
     width: 20%;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-    
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.meny{
-display: flex;
-  justify-content: center;
+.meny {
+    display: flex;
+    justify-content: center;
     margin: 0;
     margin-top: 0.3%;
     padding: 0;
 }
-.buttonMeny{
-  background-color: #f8f8f8;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  padding: 0.3% 1%;
-  border-radius: 5px;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+
+.buttonMeny {
+    background-color: #f8f8f8;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 0.3% 1%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     margin: 1%;
-
 }
-a{
+
+a {
     font-size: 90%;
     text-decoration: none;
-  color: #5c5c5c;
+    color: #5c5c5c;
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
 }
 
-
-.PortI{
+.PortI {
     opacity: 0;
     width: 30%;
     margin-left: 10px;
@@ -99,70 +100,72 @@ body{
 }
 
 
-
 /* портфоліо */
+
 .portfolio {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 }
 
 .portfolio img {
-  max-width: 40%;
-  margin-right: 10px;
+    max-width: 40%;
+    margin-right: 10px;
 }
 
 .portfolio .info {
     position: relative;
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
     left: 100%;
     animation: slide_left 1s forwards;
 }
 
 .portfolio h2 {
     font-family: 'Staatliches', cursive;
-/*    font-family: 'Luckiest Guy', cursive;*/
-/*    font-family: 'Yanone Kaffeesatz', sans-serif;*/
-/*  font-family: 'PT Sans Narrow', sans-serif;*/
-  font-size: 40px;
-  margin-bottom: 10px;
+    /*    font-family: 'Luckiest Guy', cursive;*/
+    /*    font-family: 'Yanone Kaffeesatz', sans-serif;*/
+    /*  font-family: 'PT Sans Narrow', sans-serif;*/
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .portfolio p {
     font-family: 'Ubuntu Condensed', sans-serif;
-/*    font-family: 'Catorze27', cursive;*/
-  font-size: 18px;
-  margin-bottom: 10px;
+    /*    font-family: 'Catorze27', cursive;*/
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .portfolio ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .portfolio li {
     font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 18px;
-  margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .portfolio .location {
-  font-size: 16px;
-  margin-top: 10px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .portfolio .location .icon {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
+
 /* інформація 2 */
-.infoFoto{
-      display: flex;
-  align-items: center;
-  margin: 10px 0;
+
+.infoFoto {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
     position: relative;
     flex-grow: 1;
     padding: 20px;
@@ -171,67 +174,168 @@ body{
     margin-right: 1%;
 }
 
-.infoFoto p{
-    
-}
-.infoFoto .text{
-    
-}
+.infoFoto p {}
 
-.text p{
+.infoFoto .text {}
+
+.text p {
     font-size: 18px;
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
-.infoFoto .Foto{
+.infoFoto .Foto {
     width: 40%;
-
 }
 
-.infoFoto .Foto .f1{
+.infoFoto .Foto .f1 {
     max-width: 150px;
 }
 
+@keyframes opasity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes slide_left {
+    from {}
+    to {
+        left: 0;
+    }
+}
+
+
+/*galery.html*/
+
+#textBlock {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+    margin: 0, 5%;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    /* Set a maximum width for the images */
+    margin: 0 auto;
+    /* Center the row horizontally */
+}
+
+.photo {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 23%;
+    /* Set the width of each image to 25% to display 4 images in a row */
+    height: auto;
+    /* Keep the aspect ratio of the images */
+    margin: 1%;
+    transition: all 0.3s ease-in-out;
+}
+
+.photo:hover {
+    transform: scale(1.5);
+}
+
+/*Прайс*/
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 1%;
+    }
+
+    .name {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .infoPrice {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .opn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .grn {
+        margin-right: 1%;
+    }
+
+    .priseButton {
+        background-color: #ffffff;
+        color: #333333;
+        border: 2px solid #cccccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .priseButton:hover {
+        background-color: #cccccc;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .priseButton:active {
+        box-shadow: none;
+        transform: translateY(3px);
+    }
 
 /* відображення на телефоні */
+
 @media only screen and (max-width: 600px) {
-    
     .portfolio {
-      display: flex;
-      align-items:center;
-      margin: 10px 0;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
     }
-    
     .portfolio img {
         margin-top: 1%;
         max-width: 60%;
-        
     }
     .PortI {
         width: 30%;
     }
-    
-    .logo{
-        
+    .logo {
         width: 50%;
     }
-    
     .portfolio h2 {
-      font-size: 16px;
-      margin-bottom: 5px;
+        font-size: 16px;
+        margin-bottom: 5px;
         margin-top: 5px;
     }
-    
     .portfolio p {
         font-size: 10px;
         margin-bottom: 10px;
     }
-
     .portfolio li {
         font-size: 14px;
         margin-bottom: 5px;
     }
-
     .portfolio .info {
         position: relative;
         flex-grow: 1;
@@ -240,112 +344,35 @@ body{
         left: 100%;
         animation: slide_left 1s forwards;
     }
-
     .portfolio .location {
         font-size: 10px;
         margin-top: 10px;
     }
-
-    .meny{
+    .meny {
         display: flex;
         justify-content: center;
         margin: 0;
         margin-top: 1%;
         padding: 0;
     }
-
-    .infoFoto .Foto{
+    .infoFoto .Foto {
         width: 0%;
         opacity: 0;
     }
-    .Foto img{
+    .Foto img {
         width: 0;
     }
-    
-    .text p{
+    .text p {
         font-size: 10px;
     }
-    
-}
+    /*відображення фото на телефоні*/
 
-
-@keyframes opasity{
-    from{
-        opacity: 0;
-    }to{
-        opacity: 100;
-    }
+    .photo {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 48%;
+    /* Set the width of each image to 25% to display 4 images in a row */
+    height: auto;
+    /* Keep the aspect ratio of the images */
+    margin: 1%;
 }
-@keyframes slide_left{
-    from{
-        
-    }to{
-        left: 0;
-    }
-}
-/*galery.html*/
-.gallery::-webkit-scrollbar {
-  height: 12px;
-  width: 12px;
-  background-color: #FCEADE; /* Set the background color of the scrollbar */
-}
-
-.gallery::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background-color: #FFC107; /* Set the color of the scrollbar thumb */
-}
-
-.gallery::-webkit-scrollbar-thumb:hover {
-  background-color: #FFA000; /* Set the color of the scrollbar thumb on hover */
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow-x: scroll;
-  mask-image: linear-gradient(to right, transparent, #FCEADE 50px, #FCEADE calc(100% - 0px), transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, #FCEADE 50px, #FCEADE calc(100% - 0px), transparent);
-  max-width: 100%;
-  padding: 20px;
-  margin: 20px auto; /* Change this to add some vertical space */
-  background-color: #FCEADE; /* Set the background color to a warm tone */
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: calc(33.33% - 10px); /* Adjust this to make 3 photos fit in a row */
-  margin-right: 10px;
-}
-
-.photo {
-  width: 80%; /* Change this to 60% for desktop */
-  height: auto; /* Add this to make the photos square */
-  margin: 10px;
-  cursor: pointer;
-  object-fit: cover;
-  border: 5px solid #FCEADE; /* Add a border in a similar color as the background */
-}
-
-@media (max-width: 768px) {
-  .photo {
-    width: 100%; /* Change this to 100% for mobile */
-  }
-}
-
-/* Add this to create gaps between rows */
-.row:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.photo-expanded {
-  max-width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: #FCEADE; /* Set the background color of the expanded photo to a similar tone */
 }
