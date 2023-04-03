@@ -16,8 +16,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 
-/*font-family: 'Ubuntu Condensed', sans-serif;*/
 
+/*font-family: 'Ubuntu Condensed', sans-serif;*/
+@font-face {
+    font-family: 'Comfortaa1';
+    src: url('/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Catorze27';
     src: url('/fonts/PTSansNarrow-Bold.ttf') format('truetype');
@@ -266,7 +272,7 @@ body {
 }
 
 .price p {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa1', cursive;
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
