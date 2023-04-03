@@ -247,72 +247,77 @@ body {
     transform: scale(1.5);
 }
 
+
 /*Прайс*/
 
-    .price {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        margin: 0 auto;
-        background-color: #f2f2f2;
-        border-radius: 20px;
-        padding: 30px;
-        margin-bottom: 1%;
-    }
-.price p{
-    margin-top: 2px;
-    margin-bottom: 2px;
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
-    .name {
-        font-family: 'Ubuntu Condensed', sans-serif;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.price p {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
-    .infoPrice {
-        font-family: 'Staatliches', cursive;
-        text-align: center;
-        margin-bottom: 40px;
-    }
+.name {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .opn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
+.infoPrice {
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-    .grn {
-        font-family: 'Ubuntu Condensed', sans-serif;
-        font-size: 120%;
-        margin-right: 1%;
-    }
+.opn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-    .priseButton {
-        font-family: 'Ubuntu Condensed', sans-serif;
-        background-color: #ffffff;
-        color: #333333;
-        border: 2px solid #cccccc;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-transform: uppercase;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+.grn {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 120%;
+    margin-right: 1%;
+}
 
-    .priseButton:hover {
-        background-color: #cccccc;
-        color: #ffffff;
-        cursor: pointer;
-    }
+.priseButton {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-    .priseButton:active {
-        box-shadow: none;
-        transform: translateY(3px);
-    }
+.priseButton:hover {
+    background-color: #cccccc;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.priseButton:active {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
 
 /* відображення на телефоні */
 
@@ -374,14 +379,19 @@ body {
     .text p {
         font-size: 10px;
     }
+    /* прайс на телефоні */
+    .price p {
+        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     /*відображення фото на телефоні*/
-
     .photo {
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-    width: 48%;
-    /* Set the width of each image to 25% to display 4 images in a row */
-    height: auto;
-    /* Keep the aspect ratio of the images */
-    margin: 1%;
-}
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+        width: 48%;
+        /* Set the width of each image to 25% to display 4 images in a row */
+        height: auto;
+        /* Keep the aspect ratio of the images */
+        margin: 1%;
+    }
 }
