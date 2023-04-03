@@ -261,13 +261,19 @@ body {
         padding: 30px;
         margin-bottom: 1%;
     }
+.price p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 
     .name {
+        font-family: 'Ubuntu Condensed', sans-serif;
         text-align: center;
         margin-bottom: 20px;
     }
 
     .infoPrice {
+        font-family: 'Staatliches', cursive;
         text-align: center;
         margin-bottom: 40px;
     }
@@ -280,10 +286,13 @@ body {
     }
 
     .grn {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-size: 120%;
         margin-right: 1%;
     }
 
     .priseButton {
+        font-family: 'Ubuntu Condensed', sans-serif;
         background-color: #ffffff;
         color: #333333;
         border: 2px solid #cccccc;
