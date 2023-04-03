@@ -272,7 +272,7 @@ body {
 }
 
 .price p {
-    font-family: 'Comfortaa1', cursive;
+    font-family: 'Comfortaa', cursive;
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -392,6 +392,10 @@ body {
         font-size: 10px;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+
+    .priseButton{
+       font-size: 10px;
     }
     /*відображення фото на телефоні*/
     .photo {
