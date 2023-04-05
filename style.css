@@ -312,7 +312,7 @@ body {
     padding: 10px 15px;
     font-size: 14px;
     text-transform: uppercase;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .priseButton:hover {
@@ -411,6 +411,10 @@ footer p {
     .priseButton{
        font-size: 9px;
     }
+
+    .grn {
+        padding-right: 20px;
+    }
     /*відображення фото на телефоні*/
     .photo {
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
@@ -419,6 +423,10 @@ footer p {
         height: auto;
         /* Keep the aspect ratio of the images */
         margin: 1%;
+    }
+    .price .name{
+        margin-top: 3px;
+        margin-bottom: 3px;
     }
 
     /*Footer telephon*/
