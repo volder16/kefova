@@ -309,10 +309,10 @@ body {
     color: #333333;
     border: 2px solid #cccccc;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 14px;
     text-transform: uppercase;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .priseButton:hover {
@@ -326,6 +326,20 @@ body {
     transform: translateY(3px);
 }
 
+/*Footer*/
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  color: #777;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
 
 /* відображення на телефоні */
 
@@ -389,13 +403,13 @@ body {
     }
     /* прайс на телефоні */
     .price p {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
 
     .priseButton{
-       font-size: 10px;
+       font-size: 9px;
     }
     /*відображення фото на телефоні*/
     .photo {
@@ -406,4 +420,20 @@ body {
         /* Keep the aspect ratio of the images */
         margin: 1%;
     }
+
+    /*Footer telephon*/
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+    margin: 0;
+}
+
+footer p {
+  color: #777;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
 }
