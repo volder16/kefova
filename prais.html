@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +34,7 @@
         </div>
         <div class="opn">
             <p class="grn">2000 Грн</p>
-            <button class="priseButton" onclick="location.href='gallery.html#personal'">  галерея  </button>
+            <button class="priseButton" onclick="location.href='gallery.html#personal'"> галерея </button>
             <button class="priseButton">Замовити</button>
         </div>
     </div>
@@ -41,10 +42,16 @@
         <div class="name">
             <h1>Стріт</h1></div>
         <div class="infoPrice">
-            <p>vекст</p>
+            <p>1 година зйомки</p>
+            <p>~50 фото з кольорокорекцієї</p>
+            <p>Підбір локації, образу</p>
+            <p>Ретуш фото</p>
+            <p>Кожна додаткова година 1000грн</p>
+            <p>Якщо фотосесія в ботанічному саду або щось подібне за вхід фотографа платить модель </p>
         </div>
         <div class="opn">
-            <p class="grn">2000 грн</p>
+            <p class="grn">2000 Грн</p>
+            <button class="priseButton" onclick="location.href='gallery.html#personal'"> галерея </button>
             <button class="priseButton">Замовити</button>
         </div>
     </div>
@@ -52,10 +59,13 @@
         <div class="name">
             <h1>Репортажна</h1></div>
         <div class="infoPrice">
-            <p>vекст</p>
+            <p>Ціна вказана за дві години</p>
+            <p>100-150 фото з кольорокорекцією</p>
+            <p>Кожна додаткова година 800грн</p>
         </div>
         <div class="opn">
-            <p class="grn">2000 грн</p>
+            <p class="grn">2000 Грн</p>
+            <button class="priseButton" onclick="location.href='gallery.html#personal'"> галерея </button>
             <button class="priseButton">Замовити</button>
         </div>
     </div>
@@ -63,13 +73,98 @@
         <div class="name">
             <h1>Love Story</h1></div>
         <div class="infoPrice">
-            <p>vекст</p>
+            <p>1:30-2 години</p>
+            <p>~80 фото</p>
+            <p>Ретуш фото</p>
+            <p>Підбір локацій, образу</p>
         </div>
         <div class="opn">
-            <p class="grn">2000 грн</p>
+            <p class="grn">2000 Грн</p>
+            <button class="priseButton" onclick="location.href='gallery.html#personal'"> галерея </button>
             <button class="priseButton">Замовити</button>
         </div>
     </div>
+    <form method="post" id="form">
+        <input type="hidden" name="entry.your-field-id" value="Photo Shoot">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input" name="data" required>
+        <br>
+        <label for="time-input">Time:</label>
+        <input type="time" id="time-input" name="time" min="9:00" max="20:00" step="1800" required>
+        <br>
+        <label for="phone-input">Phone Number:</label>
+        <input type="tel" id="phone-input" name="phone" required>
+        <br>
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" name="name" required>
+        <br>
+        <label for="name-input">Instagram:</label>
+        <input type="text" id="instagram-input" name="instagram" required>
+        <br>
+        <input type="submit" value=" отправить"> </form>
+    <script>
+        const URL_APP = "https://script.google.com/macros/s/AKfycbzqwi9h3USOZIUMabB9IBmD2fumfhJgsHUi0Qq373Q6Ah3pSyoe495sdQzGoe7X7itC2A/exec";
+        const form = document.querySelector("#form");
+        // указываем адрес отправки формы (нужно только в начале примера)
+        form.action = URL_APP;
+        // вспомогательная функция проверки заполненности формы
+        function isFilled(details) {
+            const {
+                name, instagram, phone, time, data
+            } = details;
+            if (!name) return false;
+            return true;
+        }
+        // навешиваем обработчик на отправку формы
+        form.addEventListener("submit", async(ev) => {
+            // отменяем действие по умолчанию
+            ev.preventDefault();
+            // получаем ссылки на элементы формы
+            const name = document.querySelector("[name=name]");
+            const instagram = document.querySelector("[name=instagram]");
+            // собираем данные из элементов формы
+            let details = {
+                name: name.value.trim()
+                , instagram: instagram.value.trim()
+            };
+            console.log(name, instagram);
+            // если поля не заполнены - прекращаем обработку
+            if (!isFilled(details)) return;
+            // подготавливаем данные для отправки
+            let formBody = [];
+            for (let property in details) {
+                // кодируем названия и значения параметров
+                let encodedKey = encodeURIComponent(property);
+                let encodedValue = encodeURIComponent(details[property]);
+                formBody.push(encodedKey + "=" + encodedValue);
+            }
+            // склеиваем параметры в одну строку
+            formBody = formBody.join("&");
+            // выполняем отправку данных в Google Apps
+            const result = await fetch(URL_APP, {
+                method: "POST",
+                headers: {
+                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+                    , },
+                cors: "no-cors",
+                body: formBody,
+            })
+            .then((res) => res.json())
+            .catch((err) => alert("Ошибка!"))
+                // .then((res) => console.log(res));
+            if (result && result.type === 'success') {
+    name.value = '';
+    alert('Спасибо за заявку!')
+}
+if (result && result.type === 'error') {
+    alert(`заїбало( ${result.errors}`)
+}
+        });
+
+        const dateInput = document.querySelector('#date-input');
+const today = new Date().toISOString().split('T')[0];
+dateInput.setAttribute('min', today);
+    </script>
 </body>
 <footer>
     <p>© Всі права захищені. Kefova</p>
