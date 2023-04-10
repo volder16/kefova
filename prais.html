@@ -109,10 +109,12 @@
         <label for="name-input">Instagram:</label>
         <input type="text" id="instagram-input" name="instagram" required>
         <br>
-        <input type="submit" value=" отправить"  onclick="submitForm();"> </form>
+        <input type="submit" value=" отправить"  >
+        <input type="submit" value=" закрити" onclick="submitForm();"> </form>
     <script>
         const URL_APP = "https://script.google.com/macros/s/AKfycbzqwi9h3USOZIUMabB9IBmD2fumfhJgsHUi0Qq373Q6Ah3pSyoe495sdQzGoe7X7itC2A/exec";
         const form = document.querySelector("#form");
+        document.getElementById("form").style.display = "none";
         // указываем адрес отправки формы (нужно только в начале примера)
         form.action = URL_APP;
         // вспомогательная функция проверки заполненности формы
@@ -197,11 +199,7 @@
             form.style.display = "block";
         });
         function submitForm() {
-  // code to handle form submission
-  // ...
-
-  // hide the form
-
+document.getElementById("form").style.display = "none";
 }
     </script>
 </body>
