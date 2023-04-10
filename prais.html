@@ -181,6 +181,7 @@
                 alert(`заїбало( ${result.errors}`)
             }
         });
+
         const dateInput = document.querySelector('#date-input');
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
