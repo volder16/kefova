@@ -244,6 +244,8 @@ body {
     max-width: 1000px;
     /* Set a maximum width for the images */
     margin: 0 auto;
+
+    border-radius: 5px;
     /* Center the row horizontally */
 }
 
@@ -428,7 +430,7 @@ select {
 /* style for the submit button */
 
 input[type="submit"] {
-    background-color: #3d85c6;
+    background-color: #5c655e;
     /* set a blue background color */
     color: #fff;
     /* set white text color */
