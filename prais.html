@@ -32,9 +32,9 @@
             <p>Кожна додаткова година +1000</p>
         </div>
         <div class="opn">
-            <p class="grn">2000 Грн</p>
+            <p class="grn">1500 Грн</p>
             <button class="galleryButton" onclick="location.href='gallery.html#personal'"> галерея </button>
-            <button class="priseButton">Замовити</button>
+            <button class="priseButton" id="priseButton">Замовити</button>
         </div>
     </div>
     <div class="price">
@@ -43,15 +43,17 @@
         <div class="infoPrice">
             <p>1 година зйомки</p>
             <p>~50 фото з кольорокорекцієї</p>
-            <p>Підбір локації, образу</p>
             <p>Ретуш фото</p>
+            <p>Підбір локації, образу</p>
             <p>Кожна додаткова година 1000грн</p>
+            <p>-----</p>
             <p>Якщо фотосесія в ботанічному саду або щось подібне за вхід фотографа платить модель </p>
+
         </div>
         <div class="opn">
-            <p class="grn">2000 Грн</p>
-            <button class="galleryButton"  onclick="location.href='gallery.html#personal'"> галерея </button>
-            <button class="priseButton">Замовити</button>
+            <p class="grn">1500 Грн</p>
+            <button class="galleryButton" onclick="location.href='gallery.html#personal'"> галерея </button>
+            <button class="priseButton" id="priseButton">Замовити</button>
         </div>
     </div>
     <div class="price">
@@ -63,9 +65,9 @@
             <p>Кожна додаткова година 800грн</p>
         </div>
         <div class="opn">
-            <p class="grn">2000 Грн</p>
-            <button class="galleryButton"  onclick="location.href='gallery.html#personal'"> галерея </button>
-            <button class="priseButton">Замовити</button>
+            <p class="grn">1400 Грн</p>
+            <button class="galleryButton" onclick="location.href='gallery.html#personal'"> галерея </button>
+            <button class="priseButton" id="priseButton">Замовити</button>
         </div>
     </div>
     <div class="price">
@@ -79,8 +81,8 @@
         </div>
         <div class="opn">
             <p class="grn">2000 Грн</p>
-            <button class="galleryButton"  onclick="location.href='gallery.html#personal'"> галерея </button>
-            <button class="priseButton">Замовити</button>
+            <button class="galleryButton" onclick="location.href='gallery.html#personal'"> галерея </button>
+            <button class="priseButton" id="priseButton">Замовити</button>
         </div>
     </div>
     <form method="post" id="form">
@@ -88,10 +90,10 @@
         <label for="date-input">Фотосесія:</label>
         <select name="options">
             <option value="">вибрати</option>
-            <option value="option1">Студійна</option>
-            <option value="option2">Персональна стріт</option>
-            <option value="option3">Репортажна</option>
-            <option value="option4">Історія кохання</option>
+            <option value="Студійна">Студійна</option>
+            <option value="Персональна стріт">Персональна стріт</option>
+            <option value="Репортажна">Репортажна</option>
+            <option value="Історія кохання">Історія кохання</option>
         </select>
         <br>
         <label for="date-input">Дата фотосесії:</label>
@@ -109,7 +111,7 @@
         <label for="name-input">Instagram:</label>
         <input type="text" id="instagram-input" name="instagram" required>
         <br>
-        <input type="submit" value=" отправить"  >
+        <input type="submit" value=" отправить">
         <input type="submit" value=" закрити" onclick="submitForm();"> </form>
     <script>
         const URL_APP = "https://script.google.com/macros/s/AKfycbzqwi9h3USOZIUMabB9IBmD2fumfhJgsHUi0Qq373Q6Ah3pSyoe495sdQzGoe7X7itC2A/exec";
@@ -120,7 +122,7 @@
         // вспомогательная функция проверки заполненности формы
         function isFilled(details) {
             const {
-                options, name, instagram, phone, time, data
+                optionsSelect, name, phone, time, data
             } = details;
             if (!name) return false;
             return true;
@@ -130,9 +132,10 @@
             // отменяем действие по умолчанию
             ev.preventDefault();
             // получаем ссылки на элементы формы
-            const selectElement = document.querySelector('select[name="options"]');
-            const selectedValue = selectElement.value;
-            const selectedOptionAsString = selectedValue.toString();
+            const optionsSelect = document.querySelector('select[name="options"]');
+            optionsSelect.addEventListener('change', (event) => {
+                const selectedOption = event.target.value;
+            });
             const name = document.querySelector("[name=name]");
             const instagram = document.querySelector("[name=instagram]");
             const phone = document.querySelector("[name=phone]");
@@ -141,13 +144,11 @@
             // собираем данные из элементов формы
             let details = {
                 name: name.value.trim()
-                , instagram: instagram.value.trim()
-                , phone: phone.value.trim()
+                , phone: phone.value.charAt()
+                ,  instagram: instagram.value.trim()
                 , time: time.value
-                , data: dateInput.value
-                , selectedOptionAsString: selectedOptionAsString.value
             };
-            console.log(selectedOptionAsString, name, phone, time, data, instagram);
+            console.log(optionsSelect, name, phone.value, time, data, instagram.value);
             // если поля не заполнены - прекращаем обработку
             if (!isFilled(details)) return;
             // подготавливаем данные для отправки
@@ -175,7 +176,7 @@
                 instagram.value = '';
                 phone.value = '';
                 time.value = '';
-                selectElement.value = '';
+                optionsSelect.value = '';
                 document.getElementById("form").style.display = "none";
                 alert('Спасибо за заявку!')
             }
@@ -183,28 +184,30 @@
                 alert(`заїбало( ${result.errors}`)
             }
         });
-
         const dateInput = document.querySelector('#date-input');
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
         //form
-        const orderButton = document.querySelector(".priseButton");
-        orderButton.addEventListener("click", () => {
-            // Center the form on the screen
-            form.style.position = "fixed";
-            form.style.top = "50%";
-            form.style.left = "50%";
-            form.style.transform = "translate(-50%, -50%)";
-            // Show the form
-            form.style.display = "block";
+        const orderButton = document.querySelectorAll("#priseButton");
+        orderButton.forEach(button => {
+            button.addEventListener("click", () => {
+                // Center the form on the screen
+                form.style.position = "fixed";
+                form.style.top = "50%";
+                form.style.left = "50%";
+                form.style.transform = "translate(-50%, -50%)";
+                // Show the form
+                form.style.display = "block";
+            });
         });
+
         function submitForm() {
-document.getElementById("form").style.display = "none";
-}
+            document.getElementById("form").style.display = "none";
+        }
     </script>
 </body>
 <footer>
-    <p>© Всі права захищені. Kefova</p>
+    <p> Kefova © Всі права захищені.</p>
 </footer>
 
 </html>
