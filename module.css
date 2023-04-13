@@ -1,6 +1,6 @@
 /* The Modal (background) */
 .modal {
-  display: flex;; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 9999; /* Sit on top */
   padding-top: 50px; /* Location of the box */
@@ -25,6 +25,7 @@
   height: 90%;
 }
 */
+/*
 .modal-content {
   margin: auto;
   display: block;
@@ -32,6 +33,17 @@
   height: auto;
   object-fit: contain;
   max-height: 100%;
+}
+*/
+.modal-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  max-height: 90%;
 }
 
 /* Add Animation */
@@ -73,6 +85,5 @@
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
-
   }
 }
