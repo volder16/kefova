@@ -133,7 +133,6 @@ body {
     animation: slide_left 1s forwards;
 }
 
-
 .portfolio h2 {
     font-family: 'Staatliches', cursive;
     /*    font-family: 'Luckiest Guy', cursive;*/
@@ -186,24 +185,30 @@ body {
     margin-right: 1%;
 }
 
-.infoFoto p {}
+.infoFoto h2 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
 
 .infoFoto .text {}
 
 .text p {
     font-size: 18px;
     font-family: 'Ubuntu Condensed', sans-serif;
+    width: 60%
 }
 
 .infoFoto .Foto {
-    width: 40%;
+    width: 30%;
 }
 
-.infoFoto .Foto .f1 {
-    max-width: 150px;
+.Foto img {
+    object-fit: cover;
+    border-radius: 2%;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
-
-
 
 
 /*galery.html*/
@@ -212,14 +217,16 @@ body {
     font-family: 'Ubuntu Condensed', sans-serif;
     text-align: center;
     margin: 0, 5%;
-      opacity: 0;
-  transform: translateY(-120%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(-120%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
 #textBlock.animated {
-  opacity: 1;
-  transform: none;
+    opacity: 1;
+    transform: none;
 }
+
 
 /*
 .gallery {
@@ -237,7 +244,6 @@ body {
     max-width: 1000px;
     /* Set a maximum width for the images */
     margin: 0 auto;
-
     border-radius: 5px;
     /* Center the row horizontally */
 }
@@ -264,8 +270,6 @@ body {
 }
 
 
-
-
 /*Прайс*/
 
 .price {
@@ -280,25 +284,28 @@ body {
     padding: 30px;
     margin-top: 1%;
     margin-bottom: 1%;
-
 }
+
 .price {
-  opacity: 0;
-  transform: translateX(60%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(60%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .price.animated {
-  opacity: 1;
-  transform: none;
+    opacity: 1;
+    transform: none;
 }
-.photo{
+
+.photo {
     opacity: 0;
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.photo.animated{
+
+.photo.animated {
     opacity: 1;
 }
+
 .price p {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
@@ -469,31 +476,33 @@ input[type="submit"] {
 }
 
 .icon-wrapper {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 .icon-link {
-  display: block;
-  float: right;
-  width: 50px;
-  height: 50px;
-  margin-left: 10px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  text-align: center;
-  line-height: 50px;
-  color: #333333;
-  font-size: 24px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-  transition: all 0.3s ease-in-out;
+    display: block;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    color: #333333;
+    font-size: 24px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
 .icon-link:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    transform: scale(1.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
+
+
 /* відображення на телефоні */
 
 @media only screen and (max-width: 600px) {
@@ -533,6 +542,10 @@ input[type="submit"] {
         left: 100%;
         animation: slide_left 1s forwards;
     }
+    .Foto img{
+            width: 0px;
+    height: 0px;
+    }
     .portfolio .location {
         font-size: 10px;
         margin-top: 10px;
@@ -553,6 +566,7 @@ input[type="submit"] {
     }
     .text p {
         font-size: 10px;
+        width: 100%
     }
     /* прайс на телефоні */
     .price p {
@@ -576,8 +590,8 @@ input[type="submit"] {
         margin: 1%;
     }
     .photo:hover {
-    transform: scale(1);
-}
+        transform: scale(1);
+    }
     .gallery img {
         object-fit: cover;
         border-radius: 2%;
@@ -608,30 +622,33 @@ input[type="submit"] {
         width: 80%;
     }
     .icon-wrapper {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-}
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
     .icon-link {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  text-align: center;
-  line-height: 50px;
-  color: #333333;
-  font-size: 24px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-  transition: all 0.3s ease-in-out;
-}
+        display: block;
+        float: right;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+        color: #333333;
+        font-size: 24px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
 }
 
 
 /*анімація*/
+
+
 /*------------------------------------*/
+
 @keyframes opasity {
     from {
         opacity: 0;
