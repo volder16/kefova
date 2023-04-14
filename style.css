@@ -509,7 +509,7 @@ input[type="submit"] {
     .portfolio {
         display: flex;
         align-items: center;
-        margin: 10px 0;
+        margin: 10px 10px;
     }
     .portfolio img {
         margin-top: 1%;
